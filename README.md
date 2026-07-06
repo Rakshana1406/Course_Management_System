@@ -1,12 +1,13 @@
-<b>#Course Management System</b>
-#Project Title
+<b>Course Management System</b>
+<br>
+<b>Project Title</b>
 Student Course Management and Learning Progress Tracking System
-1. Project Overview
+<b>1. Project Overview</b>
 The Student Course Management and Learning Progress Tracking System is a full-stack web application designed to streamline academic course enrollment and learning management. The system allows students to create accounts, browse available courses, enroll in courses, access course materials, track their learning progress, and receive updates regarding their courses.
 The application also provides administrators with tools to manage students, courses, enrollments, and progress reports.
 This project is ideal for a Full Stack Web Development course because it covers frontend development, backend APIs, database management, authentication, deployment, and security.
 
-#2. Problem Statement
+<b>2. Problem Statement</b>
 In many educational institutions, students struggle to:
 •	Find available courses 
 •	Register for courses efficiently 
@@ -16,7 +17,7 @@ In many educational institutions, students struggle to:
 Administrators face difficulties in managing course enrollments and monitoring student performance.
 The proposed system solves these problems through a centralized web-based platform.
 
-#3. Project Objectives
+<b>3. Project Objectives</b>
 1.	Provide secure student registration and login. 
 2.	Allow students to view and enroll in courses. 
 3.	Enable administrators to create and manage courses. 
@@ -25,7 +26,7 @@ The proposed system solves these problems through a centralized web-based platfo
 6.	Provide real-time notifications and updates. 
 7.	Maintain secure access to academic data. 
 
-#4. User Roles
+<b>4. User Roles</b>
 Student
 Students can:
 •	Register and login 
@@ -37,8 +38,8 @@ Students can:
 •	View completion percentage 
 •	Receive notifications 
 
-#Administrator
-#Administrators can:
+<b>Administrator</b>
+<b>Administrators can:</b>
 •	Login securely 
 •	Add/Edit/Delete courses 
 •	Manage students 
@@ -47,7 +48,7 @@ Students can:
 •	Update course content 
 •	View analytics dashboard 
 
-#5. System Modules
+<b>5. System Modules</b>
 Module 1: User Authentication
 Features
 •	Student Registration 
@@ -63,7 +64,7 @@ Email	String
 Password	Encrypted String
 Department	String
 
-#Module 2: Course Management
+<b>Module 2: Course Management</b>
 Features
 •	Add Course 
 •	Update Course 
@@ -78,16 +79,16 @@ Duration	Number of Weeks
 Description	Course Information
 Category	Programming, AI, Web, etc.
 
-#Module 3: Course Enrollment
+<b>Module 3: Course Enrollment</b>
 Features
 •	Browse Courses 
 •	Search Courses 
 •	Enroll in Course 
 •	View Enrolled Courses 
-#Workflow
+</b>Workflow
 Student Login → Browse Courses → Select Course → Enroll → Confirmation
 
-#Module 4: Learning Management
+<b>Module 4: Learning Management</b>
 Features
 •	View Modules 
 •	Access Learning Materials 
@@ -104,7 +105,7 @@ Modules:
 •	MongoDB 
 Students complete modules one by one.
 
-#Module 5: Progress Tracking
+<b>Module 5: Progress Tracking</b>
 Features
 •	Completion Percentage 
 •	Course Progress Bar 
@@ -116,7 +117,7 @@ Python	80%
 React	60%
 DBMS	100%
 
-#Module 6: Dashboard
+<b>Module 6: Dashboard</b>
 Student Dashboard
 Displays:
 •	Total Courses Enrolled 
@@ -130,7 +131,7 @@ Displays:
 •	Active Enrollments 
 •	Completion Reports 
 
-#Module 7: Notifications
+<b>Module 7: Notifications</b>
 Features
 •	New Course Alerts 
 •	Enrollment Confirmation 
@@ -140,7 +141,7 @@ Implementation using:
 •	WebSockets 
 •	Socket.IO 
 
-#6. Database Design
+<b>6. Database Design</b>
 Students Table
 Field
 student_id
@@ -176,7 +177,7 @@ progress_percentage
 
 
 
-#Layer	Technology
+<b>Layer	Technology</b>
 Frontend	HTML5, CSS3, Bootstrap, JavaScript, React.js
 Backend	Node.js, Express.js
 Database	MongoDB
