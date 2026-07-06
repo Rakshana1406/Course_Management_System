@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Completion Certificate</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#F4F7FA;
+}
+
+header{
+background:#0F766E;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+.back{
+background:#FACC15;
+color:black;
+text-decoration:none;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+justify-content:center;
+margin-top:50px;
+}
+
+.certificate{
+
+width:900px;
+background:white;
+padding:50px;
+border:10px solid #0F766E;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.certificate h1{
+
+font-size:42px;
+color:#0F766E;
+margin-bottom:20px;
+
+}
+
+.certificate h2{
+
+font-size:30px;
+margin:20px 0;
+color:#333;
+
+}
+
+.certificate p{
+
+font-size:20px;
+line-height:1.8;
+color:#555;
+
+}
+
+.student{
+
+font-size:34px;
+color:#0F766E;
+font-weight:bold;
+margin:25px 0;
+
+}
+
+.course{
+
+font-size:28px;
+color:#444;
+font-weight:bold;
+margin:20px 0;
+
+}
+
+.signatures{
+
+display:flex;
+justify-content:space-between;
+margin-top:60px;
+
+}
+
+.sign{
+
+text-align:center;
+
+}
+
+.sign hr{
+
+width:220px;
+margin-bottom:10px;
+
+}
+
+.btns{
+
+margin-top:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:14px 25px;
+margin:10px;
+background:#0F766E;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:17px;
+
+}
+
+.btn:hover{
+
+background:#115E59;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Course Certificate</h2>
+
+<a href="progress.html" class="back">← Back</a>
+
+</header>
+
+<div class="container">
+
+<div class="certificate">
+
+<h1>Certificate of Completion</h1>
+
+<p>This Certificate is Proudly Presented To</p>
+
+<div class="student" id="studentName">
+Student Name
+</div>
+
+<p>For Successfully Completing the Course</p>
+
+<div class="course" id="courseName">
+Full Stack Development
+</div>
+
+<p>
+
+Your dedication and hard work in completing this course are highly appreciated.
+We wish you continued success in your learning journey.
+
+</p>
+
+<br>
+
+<p><b>Date :</b> <span id="date"></span></p>
+
+<div class="signatures">
+
+<div class="sign">
+
+<hr>
+
+<b>Course Instructor</b>
+
+</div>
+
+<div class="sign">
+
+<hr>
+
+<b>Head of Department</b>
+
+</div>
+
+</div>
+
+<div class="btns">
+
+<button class="btn" onclick="window.print()">
+🖨 Print Certificate
+</button>
+
+<a href="student-dashboard.html" class="btn">
+🏠 Dashboard
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// Display student name from localStorage
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(user){
+document.getElementById("studentName").innerHTML = user.name;
+}
+
+// Display course name
+
+const course = localStorage.getItem("enrolledCourse");
+
+if(course){
+document.getElementById("courseName").innerHTML = course;
+}
+
+// Display today's date
+
+const today = new Date();
+
+document.getElementById("date").innerHTML =
+today.toLocaleDateString();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Modules</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#F4F7FA;
+}
+
+header{
+background:#0F766E;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+.back{
+background:#FACC15;
+color:black;
+text-decoration:none;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+margin:40px auto;
+}
+
+.container h1{
+text-align:center;
+color:#0F766E;
+margin-bottom:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+th{
+background:#0F766E;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #ddd;
+}
+
+.btn{
+padding:8px 15px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+color:white;
+}
+
+.video{
+background:#2563EB;
+}
+
+.material{
+background:#F59E0B;
+}
+
+.complete{
+background:#16A34A;
+}
+
+.btn:hover{
+opacity:0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Learning Modules</h2>
+
+<a href="course-content.html" class="back">← Back</a>
+
+</header>
+
+<div class="container">
+
+<h1>Full Stack Development Modules</h1>
+
+<table>
+
+<tr>
+<th>Module</th>
+<th>Topic</th>
+<th>Video</th>
+<th>Material</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>HTML Basics</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>CSS</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>JavaScript</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Bootstrap</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>React JS</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Node JS</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Express JS</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>MongoDB</td>
+<td><button class="btn video" onclick="video()">Watch</button></td>
+<td><button class="btn material" onclick="material()">View</button></td>
+<td><button class="btn complete" onclick="complete(this)">Complete</button></td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+
+function video(){
+
+window.location.href="video-player.html";
+
+}
+
+function material(){
+
+window.location.href="materials.html";
+
+}
+
+function complete(button){
+
+button.innerHTML="Completed";
+
+button.style.background="gray";
+
+button.disabled=true;
+
+}
+
+</script>
+
+</body>
+</html>
