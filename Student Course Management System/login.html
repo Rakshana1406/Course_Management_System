@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#F8FAFC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:420px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    color:#0F766E;
+    margin-bottom:25px;
+}
+
+.role{
+    display:flex;
+    margin-bottom:25px;
+}
+
+.role button{
+    flex:1;
+    padding:12px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.admin{
+    background:#0F766E;
+    color:white;
+    border-radius:8px 0 0 8px;
+}
+
+.student{
+    background:#E5E7EB;
+    color:#333;
+    border-radius:0 8px 8px 0;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+}
+
+.options label{
+    font-size:14px;
+    font-weight:normal;
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.options input{
+    width:auto;
+}
+
+.options a{
+    text-decoration:none;
+    color:#0F766E;
+    font-size:14px;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+.login-btn{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#0F766E;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#115E59;
+}
+
+.extra{
+    text-align:center;
+    margin-top:20px;
+}
+
+.extra a{
+    color:#0F766E;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.extra a:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 id="title">Admin Login</h2>
+
+<div class="role">
+
+<button type="button" class="admin" id="adminBtn">
+Admin
+</button>
+
+<button type="button" class="student" id="studentBtn">
+Student
+</button>
+
+</div>
+
+<form id="loginForm">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+<label>Password</label>
+
+<input
+type="password"
+id="password"
+placeholder="Enter your password"
+required>
+
+<div class="options">
+
+<label>
+<input
+type="checkbox"
+onclick="showPassword()">
+Show Password
+</label>
+
+<a href="forgot-password.html">
+Forgot Password?
+</a>
+
+</div>
+
+<button class="login-btn" type="submit">
+Login
+</button>
+
+</form>
+
+<div class="extra">
+
+Don't have an account?
+<a href="register.html">Register</a>
+
+</div>
+
+</div>
+
+<script>
+
+let selectedRole="Admin";
+
+const adminBtn=document.getElementById("adminBtn");
+const studentBtn=document.getElementById("studentBtn");
+const title=document.getElementById("title");
+
+adminBtn.onclick=function(){
+
+selectedRole="Admin";
+
+title.innerHTML="Admin Login";
+
+adminBtn.style.background="#0F766E";
+adminBtn.style.color="white";
+
+studentBtn.style.background="#E5E7EB";
+studentBtn.style.color="#333";
+
+}
+
+studentBtn.onclick=function(){
+
+selectedRole="Student";
+
+title.innerHTML="Student Login";
+
+studentBtn.style.background="#0F766E";
+studentBtn.style.color="white";
+
+adminBtn.style.background="#E5E7EB";
+adminBtn.style.color="#333";
+
+}
+
+function showPassword(){
+
+const password=document.getElementById("password");
+
+if(password.type==="password"){
+
+password.type="text";
+
+}
+else{
+
+password.type="password";
+
+}
+
+}
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
+
+const user=JSON.parse(localStorage.getItem("user"));
+
+if(user==null){
+
+alert("No account found. Please register first.");
+
+window.location.href="register.html";
+
+return;
+
+}
+
+if(email!==user.email){
+
+alert("Email not found.");
+
+return;
+
+}
+
+if(password!==user.password){
+
+alert("Incorrect password.");
+
+return;
+
+}
+
+if(selectedRole!==user.role){
+
+alert("Please select the correct role.");
+
+return;
+
+}
+
+alert("Login Successful!");
+
+if(selectedRole==="Admin"){
+
+window.location.href="admin-dashboard.html";
+
+}
+else{
+
+window.location.href="student-dashboard.html";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

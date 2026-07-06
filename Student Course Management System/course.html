@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Courses</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#F4F7FA;
+}
+
+header{
+background:#0F766E;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+.back{
+background:#FACC15;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+margin:30px auto;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.top h1{
+color:#134E4A;
+}
+
+.add-btn{
+background:#0F766E;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:8px;
+}
+
+.add-btn:hover{
+background:#115E59;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+.card h2{
+color:#0F766E;
+margin-bottom:10px;
+}
+
+.card p{
+margin:8px 0;
+color:#555;
+}
+
+.buttons{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+}
+
+.buttons a{
+text-decoration:none;
+padding:10px 15px;
+border-radius:6px;
+color:white;
+font-size:14px;
+}
+
+.view{
+background:#2563EB;
+}
+
+.edit{
+background:#F59E0B;
+}
+
+.delete{
+background:#DC2626;
+}
+
+.buttons a:hover{
+opacity:0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Course Management</h2>
+
+<a href="admin-dashboard.html" class="back">Dashboard</a>
+
+</header>
+
+<div class="container">
+
+<div class="top">
+
+<h1>Available Courses</h1>
+
+<a href="add-course.html" class="add-btn">
++ Add Course
+</a>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Full Stack Development</h2>
+
+<p><b>Instructor:</b> John David</p>
+
+<p><b>Duration:</b> 12 Weeks</p>
+
+<p><b>Category:</b> Web Development</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Python Programming</h2>
+
+<p><b>Instructor:</b> Sarah</p>
+
+<p><b>Duration:</b> 8 Weeks</p>
+
+<p><b>Category:</b> Programming</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Machine Learning</h2>
+
+<p><b>Instructor:</b> Robert</p>
+
+<p><b>Duration:</b> 10 Weeks</p>
+
+<p><b>Category:</b> AI</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Artificial Intelligence</h2>
+
+<p><b>Instructor:</b> Emily</p>
+
+<p><b>Duration:</b> 12 Weeks</p>
+
+<p><b>Category:</b> AI</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>DBMS</h2>
+
+<p><b>Instructor:</b> Michael</p>
+
+<p><b>Duration:</b> 6 Weeks</p>
+
+<p><b>Category:</b> Database</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Cloud Computing</h2>
+
+<p><b>Instructor:</b> Jennifer</p>
+
+<p><b>Duration:</b> 9 Weeks</p>
+
+<p><b>Category:</b> Cloud</p>
+
+<div class="buttons">
+
+<a href="course-details.html" class="view">View</a>
+
+<a href="edit-course.html" class="edit">Edit</a>
+
+<a href="#" class="delete">Delete</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

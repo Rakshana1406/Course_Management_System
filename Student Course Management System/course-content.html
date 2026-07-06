@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Content</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#F4F7FA;
+}
+
+header{
+background:#0F766E;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:28px;
+}
+
+.back{
+background:#FACC15;
+color:black;
+text-decoration:none;
+padding:10px 18px;
+border-radius:8px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+margin:40px auto;
+}
+
+.course-banner{
+background:white;
+padding:30px;
+border-radius:12px;
+display:flex;
+gap:30px;
+align-items:center;
+box-shadow:0 5px 10px rgba(0,0,0,.15);
+margin-bottom:35px;
+flex-wrap:wrap;
+}
+
+.course-banner img{
+width:320px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+}
+
+.details{
+flex:1;
+}
+
+.details h1{
+color:#0F766E;
+margin-bottom:15px;
+}
+
+.details p{
+margin:8px 0;
+color:#555;
+font-size:17px;
+}
+
+.progress-box{
+margin-top:20px;
+}
+
+.progress-bar{
+width:100%;
+height:18px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.progress{
+height:100%;
+width:35%;
+background:#0F766E;
+}
+
+.modules h2{
+color:#0F766E;
+margin-bottom:20px;
+}
+
+.module{
+background:white;
+padding:20px;
+margin-bottom:18px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 10px rgba(0,0,0,.12);
+flex-wrap:wrap;
+}
+
+.module h3{
+color:#0F766E;
+margin-bottom:8px;
+}
+
+.module p{
+color:#555;
+}
+
+.btn{
+background:#0F766E;
+color:white;
+padding:10px 18px;
+text-decoration:none;
+border-radius:8px;
+}
+
+.btn:hover{
+background:#115E59;
+}
+
+footer{
+margin-top:50px;
+background:#0F766E;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Course Content</h2>
+
+<a href="my-courses.html" class="back">← My Courses</a>
+
+</header>
+
+<div class="container">
+
+<div class="course-banner">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" alt="Course">
+
+<div class="details">
+
+<h1 id="courseName">Full Stack Development</h1>
+
+<p><b>Instructor:</b> John David</p>
+
+<p><b>Duration:</b> 12 Weeks</p>
+
+<p><b>Level:</b> Intermediate</p>
+
+<p><b>Status:</b> Enrolled</p>
+
+<div class="progress-box">
+
+<b>Course Progress : 35%</b>
+
+<div class="progress-bar">
+
+<div class="progress"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modules">
+
+<h2>Course Modules</h2>
+
+<div class="module">
+
+<div>
+
+<h3>Module 1 - Introduction</h3>
+
+<p>Course overview and learning objectives.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 2 - HTML & CSS</h3>
+
+<p>Build responsive web pages.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 3 - JavaScript</h3>
+
+<p>Learn JavaScript fundamentals and DOM.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 4 - Bootstrap</h3>
+
+<p>Create responsive websites using Bootstrap.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 5 - React JS</h3>
+
+<p>Develop interactive frontend applications.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 6 - Backend Development</h3>
+
+<p>Node.js, Express.js and REST APIs.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 7 - Database</h3>
+
+<p>Working with MySQL and MongoDB.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+<div class="module">
+
+<div>
+
+<h3>Module 8 - Final Project</h3>
+
+<p>Build and deploy a complete Full Stack project.</p>
+
+</div>
+
+<a href="module.html" class="btn">Open</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Student Course Management System</p>
+
+<p>Developed by Rakshana</p>
+
+</footer>
+
+<script>
+
+const course = localStorage.getItem("enrolledCourse");
+
+if(course){
+
+document.getElementById("courseName").innerHTML = course;
+
+}
+
+</script>
+
+</body>
+</html>
