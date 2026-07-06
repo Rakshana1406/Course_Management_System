@@ -1,4 +1,4 @@
-<b>#Course Management System<b>
+<b>#Course Management System</b>
 #Project Title
 Student Course Management and Learning Progress Tracking System
 1. Project Overview
